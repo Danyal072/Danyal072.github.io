@@ -163,8 +163,10 @@ a{
     -webkit-filter: grayscale(100%);
     filter: grayscale(180%);
 }
-#left-pic > img{
-    
+#left-pic > img:hover{
+    -webkit-filter: grayscale(10%);
+    filter: grayscale(10%);
+
 }
 #about-section > #right-content{
     display: flex;
@@ -175,4 +177,14 @@ a{
     width: 50%;
     height: 80vh;
     /* background-color: red; */
+}
+#right-content > h1{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+#right-content > p{
+    font-size: .8rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
