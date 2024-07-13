@@ -140,5 +140,39 @@ a{
 #second-page{
     height: 100vh;
     padding: 12px 0;
-    background-color: chocolate;
+    /* background-color: chocolate; */
+}
+#second-page > #about-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#about-section > #left-pic{
+    padding: 5rem;
+    width: 50%;
+    height: 80vh;
+    /* background-color: blue; */
+}
+#left-pic > img{
+    position: relative;
+    /* top: rem; */
+    left: 5rem;
+    /* height: 500px; */
+    width: 25rem;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(180%);
+}
+#left-pic > img{
+    
+}
+#about-section > #right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: ; */
+    padding: 5rem;
+    width: 50%;
+    height: 80vh;
+    /* background-color: red; */
 }
