@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "montserrat";
+}
+html, body{
+    width: 100%;
+    height: 100%;
+
+}
+#main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#main > #first-page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    height: 95vh;
+    width: 100%;
+}
+#first-page > #left{
+    position: relative;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    /* background-color: brown; */
+}
+#left > #side{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 10%;
+    height: 97.5vh;
+    /* padding: 0 1.7rem; */
+    gap: 10rem;
+    /* background-color: red; */
+}
+#side > #social{
+    position: relative;
+    top: 19.7rem;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    color: grey;
+    font-size: 1.5rem;
+    /* height: 25vh; */
+    gap: 30px;
+    text-align: center;
+}
+hr{
+    color: #fff;
+    width: 20%;
+    /* border: #fff 2px solid; */
+}
+#side > #scroll{
+    position: relative;
+    top: 20rem;
+    left: 1.5rem;
+    /* height: 90vh; */
+    writing-mode: vertical-lr;
+    text-orientation: revert;
+    cursor: pointer;
+}
+#side > #empty{
+    height: 10vh;
+}
+#left > #road{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+#road > #hello{
+    /* position: relative; */
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    /* justify-content: space-evenly; */
+}
+#hello > p{
+    font-size: 1.7rem;
+    margin-top: 3px;
+}
+#hello > i {
+    font-size: 2.2rem;
+}
+#road > #content{
+    margin: 0 2.5rem;
+}
+#content > h1{
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    font-size: 3rem;
+}
+#content > h1 > p{
+    font-weight: 300;
+}
+a{
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;   
+}
+#first-page > #right{
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    /* background-color: blue; */
+}
+#first-page > #right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#right > #img > img{
+    width: 90%;
+    user-select: none;
+}
+#navbar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    /* background-color: red; */
+    padding: 1rem 1.4rem;
+}
+#navbar > #logo >  h1{
+    font-size: 1.8rem;
+}
+#second-page{
+    height: 100vh;
+    padding: 12px 0;
+    background-color: chocolate;
+}
