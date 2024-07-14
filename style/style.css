@@ -7,7 +7,16 @@
 html, body{
     width: 100%;
     height: 100%;
-
+    background-color: hsl(0deg 6.9% 11.37%);
+}
+.button{
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    /* margin-top: 1rem; */
+    padding: .8rem 1.5rem;
+    background-color: rgb(224 100 50) !important;
 }
 #main{
     display: flex;
@@ -53,11 +62,7 @@ html, body{
     gap: 30px;
     text-align: center;
 }
-hr{
-    color: #fff;
-    width: 20%;
-    /* border: #fff 2px solid; */
-}
+
 #side > #scroll{
     position: relative;
     top: 20rem;
@@ -102,11 +107,6 @@ hr{
 }
 #content > h1 > p{
     font-weight: 300;
-}
-a{
-    padding: 8px 10px;
-    border-radius: 10px;
-    border: none;   
 }
 #first-page > #right{
     position: relative;
@@ -188,3 +188,320 @@ a{
     font-weight: 300;
     margin-bottom: 1rem;
 }
+
+#third-page{
+    height: 80vh;
+    padding: 3rem 0;
+    /* background-color: chocolate; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: hsl(2deg 7% 13.37%);
+}
+#third-page > #title{
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+
+}
+#third-page > #skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 5rem;
+    height: 40vh;
+}
+#skills > #icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#skills > #icon > p{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+#fourth-page{
+    height: 100vh;
+    padding: 4rem;
+    /* background-color: chocolate; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: hsl(2deg 6% 11.37%);
+}
+#fourth-page > #title{
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+    color: #fff;
+}
+#blog-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* This will space out the blog posts evenly */
+    padding: 20px;
+}
+
+.blog-post {
+    position: relative;
+    width: calc(33.333% - 40px); /* Subtracting margin from the width */
+    margin: 20px; /* Adjust margin as needed */
+}
+
+.blog-post img.blog-bg {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: for rounded corners */
+}
+
+.blog-details {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border-radius: 0 0 8px 8px; /* Match the img border-radius */
+}
+
+.blog-details h2, .blog-details p {
+    margin: 0;
+}
+
+.blog-details .read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background: #007bff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#fifth-page {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+    padding: 4rem 5rem;
+}
+#empty-emoki {
+    position: absolute;
+    width: 10%;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+    /* background-color: #f8f9fa; */
+}
+#empty-emoki > img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    /* box-shadow: -10px -10px 5px  rgba(199, 168, 10, 0.858); */
+    border-radius: 100px;
+    
+    transform: rotate3d(1, 1, 1, -20deg);
+}
+#left-quote {
+    position: relative;
+    top: 40px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
+}
+#left-quote > #title > h1 {
+    position: relative;
+    left: 10px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    font-size: 2rem;
+    /* justify-content: center; */
+    align-items: center;
+}
+#left-quote > #content-data {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#content-data > #data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80%;
+}
+#data > #social-media > i{
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+#data > #contact-details{
+    margin: 1rem 0;
+}
+#right-form {
+    width: 50%;
+    /* height: 0vh; */
+    padding: 5rem;
+}
+#form {
+    padding: 2rem;
+    background-color: rgb(224 100 50);
+    /* margin-bottom: 1rem; */
+}
+#form > form{
+    border: #222 solid 2px ;
+    padding: 3rem;
+}
+
+#form > form > .mb-3 > input, textarea{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border-bottom: #fff 1.5px solid !important;
+    border: none;
+    transition: all .3s;
+}
+#form > form > .mb-3 > input, textarea:active:focus{
+    outline: 0 !important;
+    border: none !important;
+    stroke: none !important;
+    border-bottom: #fff 2px solid !important;
+}
+
+
+#right-form > #form > form > button{
+    background-color: #222;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    transition: all .3s;
+}
+#right-form > #form > form > button:hover{
+    background-color: #222;
+    padding: .8rem;
+
+}
+
+#copyright{
+    margin-top: 2rem;
+    padding: 1rem 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6 vh;
+    background-color: hsl(0deg 8% 12.37%);
+    color: #fff;
+}
+#coptyright > p{
+    padding: 2rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    #main{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    #main > #first-page{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        position: relative;
+        height: 95vh;
+        width: 100%;
+    }
+    #first-page > #left{
+        display: none;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        /* background-color: brown; */
+    }
+    #left > #side{
+        display: none !important;
+    }
+    #left > #road{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        /* justify-content: center; */
+    }
+    #road > #hello{
+        /* position: relative; */
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        /* justify-content: space-evenly; */
+    }
+    #hello > p{
+        font-size: 1.7rem;
+        margin-top: 3px;
+    }
+    #hello > i {
+        font-size: 2.2rem;
+    }
+    #road > #content{
+        margin: 0 2.6rem;
+    }
+    #content > h1{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        font-size: 1.8rem;
+    }
+    #content > h1 > p{
+        font-weight: 300;
+    }
+    #first-page > #right{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        /* background-color: blue; */
+    }
+    #first-page > #right{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #right > #img > img{
+        width: 80%;
+        user-select: none;
+    }
+    #second-page{
+        display: none;
+        height: 100vh;
+        padding: 12px 0;
+        /* background-color: chocolate; */
+    }
+}
+
