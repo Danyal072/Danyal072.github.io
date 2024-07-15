@@ -424,7 +424,7 @@ html, body{
     font-weight: 300;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     #main{
         display: flex;
         flex-direction: column;
@@ -608,7 +608,7 @@ html, body{
     #fourth-page{
         /* display: none !important; */
         height: 100vh;
-        /* padding: .8rem; */
+        padding: 2rem 4rem;
         /* background-color: chocolate; */
         display: flex;
         flex-direction: column;
@@ -636,8 +636,8 @@ html, body{
     
     .blog-post {
         position: relative;
-        width: 100%; /* Subtracting margin from the width */
-        /* height: 100%; */
+        width: 60vw; /* Subtracting margin from the width */
+        height: 100%;
         /* left: 30px; */
         margin: 10px; /* Adjust margin as needed */
     }
@@ -655,7 +655,7 @@ html, body{
         background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
         color: #fff;
         width: 100%;
-        padding: 10px;
+        padding: .7rem;
         border-radius: 0 0 4px 4px; /* Match the img border-radius */
     }
     
@@ -674,34 +674,34 @@ html, body{
         margin-top: 10px;
         color: #fff;
         background: rgb(224 100 50);
-        padding: 5px 10px;
+        padding: .5rem .7rem;
         text-decoration: none;
         border-radius: 5px;
     }
     #fifth-page {
         /* display: none !important; */
-        position: relative;
+        /* margin-top: 4rem; */
         display: flex;
         flex-direction: column;
         /* flex-wrap: wrap; */
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 130vh;
+        height: 120vh;
         padding: 1.5rem 1rem;
         /* background-color: #007bff; */
     }
     #empty-emoki {
         position: absolute;
         width: 100%;
-        left: 10px;
-        top: 10px;
+        left: .8rem;
+        top: .7rem;
         z-index: 0;
         /* background-color: #f8f9fa; */
     }
     #empty-emoki > img {
-        width: 100px;
-        height: 100px;
+        width: 6.25em;
+        height: 6.2em;
         opacity: 1;
         /* box-shadow: -10px -10px 5px  rgba(199, 168, 10, 0.858); */
         border-radius: 100px;
@@ -709,21 +709,18 @@ html, body{
         transform: rotate3d(1, 1, 1, -20deg);
     }
     #left-quote {
-        position: relative;
-        top: 45px;
-        left: 10px;
-        width: 100%;
-        height: 50vh;
+        width: 100vw;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         padding: 0 2rem;
         /* background: #000; */
-        /* justify-content: flex-start; */
-        /* align-items: center; */
+        justify-content: center;
+        align-items: center;
     }
     #left-quote > #title > h1 {
         position: relative;
-        left: 10px;
+        left: 0;
         width: 100%;
         height: 100%;
         display: flex;
@@ -814,7 +811,7 @@ html, body{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 6 vh;
+        height: 6vh;
         background-color: hsl(0deg 8% 12.37%);
         color: #fff;
     }
@@ -825,4 +822,6 @@ html, body{
     }
 
 }
+
+
 
