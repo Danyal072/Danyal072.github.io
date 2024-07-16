@@ -9,13 +9,29 @@
     <link rel="stylesheet" href="bootstrap/node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <!-- <script src="bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"    ></script> -->
      <link rel="stylesheet" href="style/style.css">
+     <link rel="stylesheet" href="style/menu.css/menu.css">
 </head>
-<body class="w-100" data-bs-theme="dark">
+<body data-bs-theme="dark">
    
 <div id="main">
     <div id="navbar">
-        <div id="humburger">
-            <i class="bi bi-list"></i>
+        <div id="navigation">
+            <input type="checkbox" id="navcheck" role="button" title="menu">
+            <label for="navcheck" aria-hidden="true" title="menu">
+            <span class="burger">
+                <span class="bar">
+                <span class="visuallyhidden">Menu</span>
+                </span>
+            </span>
+            </label>
+            <nav id="menu">
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Services</a>
+            <a href="#">News</a>
+            <a href="#">Contact</a>
+            </nav>
         </div>
         <div id="logo">
             <h1>Danyal Ahmed</h1>
@@ -25,7 +41,6 @@
     <div id="first-page">
         <div id="left">
             <div id="side">
-                <!-- <div id="empty"></div> -->
                 <div id="social">
                     <i class="bi bi-instagram"></i>
                     <i class="bi bi-twitter-x"></i>
@@ -90,13 +105,13 @@
                     <img src="https://img.icons8.com/?size=100&id=cQfKnWABsKk9&format=png&color=FFFFFF" alt="">
                     <p>Wix</p>
                 </div>
+            </div>
         </div>
-    </div>
     <div id="fourth-page">
         <div id="title">
             <h1>Blog</h1>
         </div>
-         <!-- Add this section to your index.html where you want the blog section to appear -->
+       
         <div id="blog-section">
             <div class="blog-post">
                 <img src="img/m.jpg" alt="Blog Post Background" class="blog-bg">
@@ -164,7 +179,7 @@
     </div>
 </div>
 
-
+<script src="scripts/index.js"></script>
 <script src="bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <!-- <script src="bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> -->
 <!-- <script src="bootstrap/node_modules/@popperjs/core/dist/umd/popper.js"></script> -->
