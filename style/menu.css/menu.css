@@ -23,11 +23,11 @@ label {
     pointer-events: none;
     transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
   label .burger {
-    position: fixed;
-    top: 1em;
-    left: 1em;
+    position: absolute;
+    top: -0.5em;
+    /* left: 1em; */
     z-index: 3;
-    width: 2em;
+    width: 2.3em;
     height: 2em;
     margin: 0;
     padding: 0;
@@ -41,6 +41,7 @@ label {
       height: 12%;
       background: #ffffff;
       content: "";
+      border-radius: 10px;
       transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
     label .burger .bar {
       top: 44%; }
@@ -73,11 +74,13 @@ nav {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   transform: translate3d(0, 0, 0);
   transform: translateX(-100%);
   will-change: transform;
-  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1); }
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  width: 40rem;
+}
   nav::before {
     position: absolute;
     top: 0;
@@ -117,7 +120,7 @@ nav {
     nav a:nth-child(6) {
       transition-delay: 0s, 350ms; }
     nav a:hover, nav a:focus {
-      color: #1950FF; }
+      color: #fff; }
 
 main {
   overflow: hidden; }
@@ -134,18 +137,24 @@ main {
   width: 141.42%; }
 
 [id="navcheck"]:checked + label .burger::before {
-  transform: rotate(45deg) translateY(-50%); }
+  transform: rotate(45deg) translateY(-50%); 
+  width: 2.9rem;
+}
 
 [id="navcheck"]:checked + label .burger::after {
-  transform: rotate(-45deg) translateY(50%); }
+  transform: rotate(-45deg) translateY(50%); 
+  width: 2.9rem;
+}
 
 [id="navcheck"]:checked + label .burger .bar {
-  transform: scale(0.1); }
+  transform: scale(0); }
 
 [id="navcheck"]:checked ~ nav {
   transform: translateX(0); }
   [id="navcheck"]:checked ~ nav::before {
-    transform: skewX(15deg) translateX(0); }
+    transform: skewX(2deg) translateX(0);
+    animation: skwe 2s both;
+  }
   [id="navcheck"]:checked ~ nav a {
     transform: translateX(0); }
 
@@ -157,3 +166,10 @@ main {
 /* Style Page */
 p {
   text-align: justify; }
+
+/* Keyframes */
+@keyframes skwe {
+  0% {
+    transform: skewX(10deg) translateX(0); }
+  100% {
+    transform: skewX(2deg) translateX(0); } }

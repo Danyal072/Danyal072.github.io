@@ -1,9 +1,15 @@
-function onClickMenu() {
-    document.getElementById('menu').classList.toggle('icons');
-    document.getElementById('nav').classList.toggle('change');
-    document.getElementById('close-btn').addEventListener('click', function() {
-        document.getElementById('menu').classList.remove('icons');
-        document.getElementById('nav').classList.remove('change');
-    });
+var navbar = document.querySelector('#navbar');
+
+
+function stickyNavbar() {
+  
+    if (window.scrollY > 0) {
+        navbar.style.postion = 'fixed';
+        console.log('scrolling');
+    } else {
+        navbar.style.postion = 'relative';
+    }
+    
 }
-onClickMenu();
+
+stickyNavbar();
