@@ -769,7 +769,7 @@ html, body{
     #right-form {
         position: relative;
         top: 2.5rem;
-        left: .5rem;
+        /* left: .5rem; */
         /* bottom: -20px; */
         /* display: none; */
         width: 100%;
