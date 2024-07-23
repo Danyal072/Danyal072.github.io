@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -124,6 +126,29 @@ html, body{
     width: 90%;
     user-select: none;
 }
+.wow{
+    position: fixed;
+    background-color: none !important;
+    color: #000;
+    /* top:  !important; */
+    top: .8em !important;
+    z-index: 100000;
+}
+
+.sticky{
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    background-color: rgb(224 100 50);
+    color: #fff;
+    /* top: 1.5rem; */
+    z-index: 100000;
+    transition: all 1s;
+}
+.sticky > #logo{
+    position: relative;
+    top: 5px;
+}
 #navbar{
     position: relative;
     display: flex;
@@ -136,8 +161,9 @@ html, body{
     padding: 1rem 1.4rem;
     z-index: 100000;
 }
+
 #navbar > #logo >  h1{
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
     /* position: fixed; */
     text-align: center;
     /* top: 1rem; */

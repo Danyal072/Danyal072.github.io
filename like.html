@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+
+<head> 
+	<meta charset="UTF-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content= 
+		"width=device-width, initial-scale=1.0"> 
+
+	<style> 
+		#box { 
+			width: max-content; 
+			height: auto; 
+			background-color: green; 
+			padding: 40px; 
+			color: white; 
+			font-size: 20px; 
+			font-weight: 200; 
+			position: relative; 
+		} 
+
+		#box::after { 
+			position: absolute; 
+			content: '::after peseudo element'; 
+			top: 0; 
+			left: 100%; 
+			padding: 40px; 
+			color: white; 
+			width: max-content; 
+			height: auto; 
+			background-color: orangered; 
+			font-size: 20px; 
+			font-weight: 200; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+	<h2 style="color: green;"> 
+		GeeksforGeeks 
+	</h2> 
+	
+	<h3> 
+		How to update the CSS properties 
+		of pseudo element ::after and 
+		::before using javascript 
+	</h3> 
+
+	<div id="box"> 
+		Hello Geek! 
+	</div> 
+	<br> 
+
+	<button onclick="changeColorPseudoEle()"> 
+		ChangeContent_of_::after_element 
+	</button> 
+
+	<script> 
+		const changeColorPseudoEle = () => { 
+
+			// Selecting the "#box::after" CSS 
+			// rule from rule list 
+			let st = document.styleSheets[0].cssRules[1]; 
+
+			// Change the styles of the selected 
+			// pseudo element 
+			st.style.content = '"Content Changed!"'; 
+		} 
+	</script> 
+</body> 
+
+</html>
