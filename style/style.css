@@ -9,7 +9,7 @@
 html, body{
     width: 100%;
     height: 100%;
-    background-color: hsl(0deg 6.9% 11.37%);
+    background-color: hsl(0deg 6.9% 11.37%) !important;
 }
 .button{
     cursor: pointer;
@@ -129,7 +129,7 @@ html, body{
 .wow{
     position: fixed;
     background-color: none !important;
-    color: #000;
+    /* color: #ffffff; */
     /* top:  !important; */
     top: .8em !important;
     z-index: 100000;
@@ -466,6 +466,41 @@ html, body{
 }
 
 @media (max-width: 600px) or (max-width:768px){
+    .wow{
+        position: fixed;
+        background-color: none !important;
+        /* color: #ffffff; */
+        /* top:  !important; */
+        top: 1.2rem !important;
+        z-index: 100000;
+    }
+    .sticky > #leave{
+        display: none;
+        transition: all 1s;
+    }
+    
+    .sticky{
+        display: grid !important;
+        grid-template-columns: .2fr 1fr;
+        position: fixed !important;
+        /* padding: .2ere !important; */
+        top: 1.3rem;
+        width: 100%;
+        background-color: rgb(224 100 50);
+        color: #fff;
+        /* top: 1.5rem; */
+        z-index: 100000;
+        transition: all 1s;
+    }
+    .sticky > #logo{
+        position: relative;
+        top: -10px;
+        /* left: -10px; */
+        z-index: 10000;
+    }
+
+
+
     #main{
         display: flex;
         flex-direction: column;
@@ -545,13 +580,20 @@ html, body{
         width: 100%;
     }
     #navbar{
+        display: grid !important;
+        grid-template-columns: .2fr 1fr;
         /* display: none !important; */
         font-size: .8rem;
         padding: 1rem 1.4rem;
     }
+    #navbar > #logo {
+        z-index: 10000;
+     
+    }
     #navbar > #logo >  h1{
         font-size: 1.8rem !important;
-        margin-top: .5rem;
+        /* margin-top: .5rem; */
+        /* z-index: 100000; */
     }
     #second-page{
         /* display: none !important; */

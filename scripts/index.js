@@ -7,3 +7,4 @@ window.addEventListener('scroll', function() {
      a.classList.toggle("wow", window.scrollY > 0);
     // b.classList.toggle("lol", window.scrollY > 0);
 });
+

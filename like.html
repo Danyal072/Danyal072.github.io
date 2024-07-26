@@ -1,72 +1,59 @@
-<!DOCTYPE html> 
-<html lang="en"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+</head>
+<body>
+	<div id="container">
 
-<head> 
-	<meta charset="UTF-8"> 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-	<meta name="viewport" content= 
-		"width=device-width, initial-scale=1.0"> 
+	</div>
 
-	<style> 
-		#box { 
-			width: max-content; 
-			height: auto; 
-			background-color: green; 
-			padding: 40px; 
-			color: white; 
-			font-size: 20px; 
-			font-weight: 200; 
-			position: relative; 
-		} 
+	<script>
+		document.addEventListener('DOMContentLoaded', function(){
+			fetchPost();
+		})
 
-		#box::after { 
-			position: absolute; 
-			content: '::after peseudo element'; 
-			top: 0; 
-			left: 100%; 
-			padding: 40px; 
-			color: white; 
-			width: max-content; 
-			height: auto; 
-			background-color: orangered; 
-			font-size: 20px; 
-			font-weight: 200; 
-		} 
-	</style> 
-</head> 
+		function fetchPost() {
+			fetch('a.json')
+			.then(response => response.json())
+			.then(posts => {
+				displayPost(posts);
+			})
+			.catch(error => console.log('Error Fetching Post: ', error));
+		}
+		function displayPost(posts, index) {
+			const container = document.getElementById('container');
+			container.innner = '';
 
-<body> 
-	<h2 style="color: green;"> 
-		GeeksforGeeks 
-	</h2> 
-	
-	<h3> 
-		How to update the CSS properties 
-		of pseudo element ::after and 
-		::before using javascript 
-	</h3> 
+			posts.forEach(post => {
+				const postElement = document.createElement('div');
+				postElement.classList.add('post');
 
-	<div id="box"> 
-		Hello Geek! 
-	</div> 
-	<br> 
+				const title = document.createElement('h2');
+				title.textContent = post.title;
 
-	<button onclick="changeColorPseudoEle()"> 
-		ChangeContent_of_::after_element 
-	</button> 
+				const content = document.createElement('p');
+				content.textContent = post.content.substring(0, 50) + '...';
 
-	<script> 
-		const changeColorPseudoEle = () => { 
+				const readMore = document.createElement('button');
+				readMore.textContent = 'Read More';
+				readMore.addEventListener('click', () => {
+            window.location.href = `post.html?id=${encodeURIComponent(post.title)}`;
+        });
 
-			// Selecting the "#box::after" CSS 
-			// rule from rule list 
-			let st = document.styleSheets[0].cssRules[1]; 
+				postElement.appendChild(title);
+				postElement.appendChild(content);
+				postElement.appendChild(readMore);
+				container.appendChild(postElement);
 
-			// Change the styles of the selected 
-			// pseudo element 
-			st.style.content = '"Content Changed!"'; 
-		} 
-	</script> 
-</body> 
+			});
+			
+		}
 
+	</script>
+
+
+</body>
 </html>
