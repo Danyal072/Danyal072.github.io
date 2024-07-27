@@ -7,6 +7,7 @@ function fetchPost() {
     .then(response => response.json())
     .then(posts => {
         displayCarousel(posts);
+        addMouseHoverScroll();
     })
     .catch(error => console.log('Error Fetching Post: ', error));
 }
@@ -25,7 +26,7 @@ function displayCarousel(posts) {
         if (index === 0) {
             carouselItem.classList.add('active');
         }
-        carouselItem.setAttribute('data-bs-interval', '2000');
+        carouselItem.setAttribute('data-bs-interval', '5000');
 
         // Add image if available
         if (post.image) {
@@ -36,17 +37,14 @@ function displayCarousel(posts) {
         }
 
         const postContent = document.createElement('div');
-        postContent.classList.add('carousel-caption', 'd-none', 'd-md-block', 'post-content');
+        postContent.classList.add('carousel-caption', 'd-md-block', 'post-content');
 
-        const title = document.createElement('h5');
-        title.textContent = post.title;
+        const title = document.createElement('h1');
+        title.innerHTML = post.title;
 
         const content = document.createElement('p');
-        if(window.innerWidth < 768){
-        content.innerHTML = post.tagline.substring(0, 150) + '...'; // Display a preview
-        }else{
-        content.innerHTML = post.tagline// Display a previe
-        }
+        content.innerHTML = post.tagline.substring(0, 180) + '...'; // Display a preview
+
         const readMore = document.createElement('a');
         readMore.textContent = 'Read More';
         readMore.href = `pages/post.html?id=${encodeURIComponent(post.title)}`;
@@ -59,16 +57,38 @@ function displayCarousel(posts) {
         carouselItem.appendChild(postContent);
         carouselInner.appendChild(carouselItem);
 
-            // Create carousel indicator
-            const indicator = document.createElement('button');
-            indicator.type = 'button';
-            indicator.setAttribute('data-bs-target', '#carouselExampleDark');
-            indicator.setAttribute('data-bs-slide-to', index);
-            indicator.setAttribute('aria-label', `Slide ${index + 1}`);
-            if (index === 0) {
-                indicator.classList.add('active');
-                indicator.setAttribute('aria-current', 'true');
-            }
-            carouselIndicators.appendChild(indicator);
+        // Create carousel indicator
+        const indicator = document.createElement('button');
+        indicator.type = 'button';
+        indicator.setAttribute('data-bs-target', '#carouselExampleDark');
+        indicator.setAttribute('data-bs-slide-to', index);
+        indicator.setAttribute('aria-label', `Slide ${index + 1}`);
+        if (index === 0) {
+            indicator.classList.add('active');
+            indicator.setAttribute('aria-current', 'true');
+        }
+        carouselIndicators.appendChild(indicator);
     });
+}
+
+function addMouseHoverScroll() {
+    const carousel = document.getElementById('carouselExampleDark');
+    const bsCarousel = new bootstrap.Carousel(carousel);
+
+    carousel.addEventListener('mouseover', function() {
+        carousel.addEventListener('wheel', handleScroll);
+    });
+
+    carousel.addEventListener('mouseleave', function() {
+        carousel.removeEventListener('wheel', handleScroll);
+    });
+
+    function handleScroll(event) {
+        event.preventDefault(); // Prevent page scrolling
+        if (event.deltaY > 0) {
+            bsCarousel.next();
+        } else {
+            bsCarousel.prev();
+        }
+    }
 }

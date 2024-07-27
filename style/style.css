@@ -8,7 +8,7 @@
 }
 html, body{
     width: 100%;
-    height: 100%;
+    height: 100% !important;
     background-color: hsl(0deg 6.9% 11.37%) !important;
 }
 .button{
@@ -277,6 +277,7 @@ html, body{
 #fourth-page > #title{
     font-size: 3rem;
     font-weight: bolder;
+    text-decoration: underline;
     text-align: center;
     color: #fff;
 }
@@ -285,25 +286,29 @@ html, body{
     flex-wrap: wrap;
     justify-content: space-around; /* This will space out the blog posts evenly */
     padding: 20px;
-    height: 100vh;
+    height: 140vh !important;
     align-items: center;
 }
 #blog-section  img{
-    width: 80vw !important;
-    height: 60vh !important;
-    object-fit: cover;
+    width: 1280px !important;
+    height: 500px !important;
+    object-fit:cover;
+    object-position: top;
+    border-radius: 10px;
 }
-#blog-section > #slider> .carousel-inner{
+/* #blog-section > #slider> .carousel-inner{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-}
+} */
 .carousel-inner > .carousel-item > .carousel-caption{
+    
     background-color: #222;
     color: #fff;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .carousel-inner > .carousel-item > .carousel-caption > p{
@@ -318,7 +323,7 @@ html, body{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 70vh;
+    height: 110vh;
     padding: 4rem 5em;
 }
 #empty-emoki {
