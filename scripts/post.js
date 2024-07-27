@@ -45,7 +45,7 @@ function displayCarousel(posts) {
         if(window.innerWidth < 768){
         content.innerHTML = post.tagline.substring(0, 150) + '...'; // Display a preview
         }else{
-        content.innerHTML = post.tagline// Display a preview
+        content.innerHTML = post.tagline// Display a previe
         }
         const readMore = document.createElement('a');
         readMore.textContent = 'Read More';
