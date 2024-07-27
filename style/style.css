@@ -293,7 +293,7 @@ html, body{
     width: 1280px !important;
     height: 500px !important;
     object-fit:cover;
-    object-position: top;
+    object-position: center 50px;
     border-radius: 10px;
 }
 /* #blog-section > #slider> .carousel-inner{

@@ -37,7 +37,7 @@ function displayCarousel(posts) {
         }
 
         const postContent = document.createElement('div');
-        postContent.classList.add('carousel-caption', 'd-md-block', 'post-content');
+        postContent.classList.add('carousel-caption', 'd-md-block', 'post-content', 'position-sticky');
 
         const title = document.createElement('h1');
         title.innerHTML = post.title;
