@@ -17,6 +17,7 @@
     </head>
 <body data-bs-theme="dark">
    
+    <div id="cursor"></div>
 <div id="main">
     <div id="navbar">
         <div id="navigation">
@@ -63,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div id="right">
+        <div id="right" class="cursor-inOUT">
             <div id="img">
                 <img src="img/coder.png" draggable="false" alt="">
             </div>
@@ -71,7 +72,7 @@
     </div>
     <div id="second-page">
         <div id="about-section">
-            <div id="left-pic">
+            <div id="left-pic" class="cursor-inOUT">
                 <img src="img/m.jpg" alt="">
             </div>
             <div id="right-content">
@@ -84,7 +85,7 @@
     </div>
     <div id="third-page">
         <div id="title">Skills</div>
-        <div id="skills">
+        <div id="skills" class="cursor-inOUT">
                 <div id="icon">
                     <img src="https://img.icons8.com/?size=100&id=23028&format=png&color=FFFFFF" alt="">
                     <p>HTML</p>
@@ -111,34 +112,7 @@
                 </div>
             </div>
         </div>
-    <div id="fourth-page">
-        <div id="title">
-            <h1>Blog</h1>
-        </div>
-       
-        <div id="blog-section">
-            <div >
-                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators" id="carousel-indicators">
-                    <!-- Indicators will be inserted here by JavaScript -->
-                </div>
-
-                <div class="carousel-inner" id="carousel-inner">
-                    <!-- Carousel items will be inserted here by JavaScript -->
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        
-        </div>
-  </div>
+ 
 
     <div id="fifth-page">
         <div id="empty-emoki">
@@ -196,11 +170,12 @@
 </div>
 
 <script src="scripts/index.js"></script>
-<script src="scripts/post.js"></script>
+<!-- <script src="scripts/post.js"></script> -->
 <script src="bootstrap/node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script src="bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
 <!-- <script src="bootstrap/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> -->
 <!-- <script src="bootstrap/node_modules/@popperjs/core/dist/umd/popper.js"></script> -->

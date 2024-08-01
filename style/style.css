@@ -11,6 +11,15 @@ html, body{
     height: 100% !important;
     background-color: hsl(0deg 6.9% 11.37%) !important;
 }
+#cursor{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1000000;
+    mix-blend-mode: difference;
+}
 .button{
     cursor: pointer;
     text-decoration: none;
@@ -132,7 +141,15 @@ html, body{
     /* color: #ffffff; */
     /* top:  !important; */
     top: .8em !important;
-    z-index: 100000;
+    z-index: 10000;
+}
+.wows{
+    position: fixed;
+    background-color: none !important;
+    /* color: #ffffff; */
+    /* top:  !important; */
+    top: 4rem !important;
+    z-index: 100000 !important;
 }
 
 .sticky{
