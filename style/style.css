@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "montserrat";
+    /* cursor: none; */
 }
 html, body{
     width: 100%;
@@ -150,7 +151,7 @@ html, body{
     /* color: #ffffff; */
     /* top:  !important; */
     top: 4rem !important;
-    z-index: 100000 !important;
+    z-index: 10000 !important;
 }
 
 .sticky{
@@ -482,12 +483,16 @@ html, body{
 }
 
 @media (max-width: 600px) or (max-width:768px){
+    #cursor{
+        display: none;
+    }
     .wow{
         position: fixed;
         background-color: none !important;
         /* color: #ffffff; */
         /* top:  !important; */
-        top: 1.2rem !important;
+        /* top: 1.2rem !important; */
+        /* top: -5px; */
         z-index: 100000;
     }
     .sticky > #leave{
@@ -500,7 +505,7 @@ html, body{
         grid-template-columns: .2fr 1fr;
         position: fixed !important;
         /* padding: .2ere !important; */
-        top: 1.3rem;
+        top: 0em;
         width: 100%;
         background-color: rgb(224 100 50);
         color: #fff;
@@ -510,7 +515,7 @@ html, body{
     }
     .sticky > #logo{
         position: relative;
-        top: -10px;
+        top: 0px;
         /* left: -10px; */
         z-index: 10000;
     }

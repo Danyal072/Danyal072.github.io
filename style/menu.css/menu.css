@@ -72,11 +72,11 @@ nav {
   top: 4rem;
   left: 0;
   bottom: 0;
-  z-index: 9;
+  z-index: 100000;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   transform: translate3d(0, 0, 0);
   transform: translateX(-100%);
   will-change: transform;
@@ -120,8 +120,9 @@ nav {
       nav::before {
         width: 40em; } }
   nav a {
+    /* background-color: red; */
     margin: 0.5em 0;
-    padding: 0.2em 2em;
+    padding: 0.9rem 2rem;
     font-size: 1.5em;
     color: #000;
     text-decoration: none;
