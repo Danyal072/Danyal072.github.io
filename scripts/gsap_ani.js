@@ -54,7 +54,7 @@ function screenCheck() {
             opacity: 0,
             duration: 1,
            ease: 'back' ,
-           delay: .7,
+           delay: .5,
         })  
 
 
