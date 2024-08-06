@@ -49,3 +49,19 @@ document.addEventListener('DOMContentLoaded', function () {
     
 }
 window.addEventListener('scroll', scrolF);
+
+
+// let scrollDown = document.querySelector('#scrollDown');
+
+// scrollDown.addEventListener('click', () => {
+//         console.log('scrolling down');
+//     window.scrollY = 1000;
+// })
+
+
+let scrollDown = document.querySelector('#scrollDown');
+
+function topFunction() {
+  document.body.scrollTop = 700;
+  document.documentElement.scrollTop = 700;
+}

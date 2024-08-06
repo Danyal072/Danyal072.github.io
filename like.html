@@ -3,60 +3,29 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title></title>
+	<title>Checking</title>
+	<style>
+        #main{
+            display: flex;
+            flex-direction: row;
+        }
+	</style>
 </head>
 <body>
-	<div id="container">
 
-	</div>
+        <p class="change"></p><p>&nbsp; - are viewing right now</p>
+    
 
-	<script>
-		document.addEventListener('DOMContentLoaded', function(){
-			fetchPost();
-		})
-
-		function fetchPost() {
-			fetch('a.json')
-			.then(response => response.json())
-			.then(posts => {
-				displayPost(posts);
-			})
-			.catch(error => console.log('Error Fetching Post: ', error));
-		}
-		function displayPost(posts, index) {
-			const container = document.getElementById('container');
-			container.innner = '';
-
-			posts.forEach(post => {
-				const postElement = document.createElement('div');
-				postElement.classList.add('post');
-
-				const author = document.createElement('p');
-				author.textContent = post.author;
-
-				const title = document.createElement('h2');
-				title.textContent = post.title;
-
-				const content = document.createElement('p');
-				content.textContent = post.content.substring(0, 50) + '...';
-
-				const readMore = document.createElement('button');
-				readMore.textContent = 'Read More';
-				readMore.addEventListener('click', () => {
-            window.location.href = `post.html?id=${encodeURIComponent(post.title)}`;
-        });
-
-				postElement.appendChild(author);
-				postElement.appendChild(title);
-				postElement.appendChild(content);
-				postElement.appendChild(readMore);
-				container.appendChild(postElement);
-
-			});
-			
-		}
-
-	</script>
+    <script>
+        var changing = document.querySelector('.change');
+        var i = 0;
+        // i = Math.    floor(Math.random() * 20) + 1;
+        setInterval(() => {
+            changing.innerHTML = i;
+            i = Math.floor(Math.random() * 20) + 1;
+        }, 1000);
+        alert(i)
+    </script>
 
 
 </body>

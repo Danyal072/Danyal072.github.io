@@ -76,11 +76,16 @@ html, body{
     text-align: center;
 }
 
-#side > #scroll{
+#side > #scrollDown{
     position: relative;
     top: 20rem;
     left: 1rem;
     height: 100vh;
+    writing-mode: vertical-lr;
+    text-orientation: revert;
+}
+#side > #scrollDown:hover{
+    
     writing-mode: vertical-lr;
     text-orientation: revert;
     cursor: pointer;
